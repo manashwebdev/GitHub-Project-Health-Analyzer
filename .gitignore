@@ -1,0 +1,12 @@
+node_modules
+client/node_modules
+server/node_modules
+
+.env
+server/.env
+
+.next
+dist
+build
+
+.DS_Store

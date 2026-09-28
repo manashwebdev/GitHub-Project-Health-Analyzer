@@ -1,0 +1,13 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+:root { --bg: #050505; --card: #101010; --card2: #151515; }
+html { background: var(--bg); color: #ededed; scroll-behavior: smooth; }
+body { font-family: var(--font-body), system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+.glass { background: linear-gradient(180deg, rgba(21,21,21,.75), rgba(16,16,16,.6)); backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,.07); box-shadow: 0 20px 60px -20px rgba(0,0,0,.8), inset 0 1px 0 rgba(255,255,255,.05); }
+.gborder { position: relative; }
+.gborder::before { content: ''; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none;
+  background: linear-gradient(135deg, rgba(99,120,255,.7), rgba(255,255,255,0) 40%, rgba(34,211,238,.5));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+@keyframes drift { 50% { transform: translate(40px, -30px) scale(1.1); } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+:focus-visible { outline: 2px solid #6378ff; outline-offset: 3px; }
